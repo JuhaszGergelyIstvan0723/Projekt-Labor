@@ -5,7 +5,7 @@ nav{
 nav a {
     margin-right: 20px;
 }
-.footer_img{
+.footer_img, c-image{
     width:100%;
     height: 100px;
 }
@@ -29,4 +29,8 @@ ul{
 
     width: 50%;
     height: 500px;
+}
+
+.card{
+    margin-left: 2%;
 }
