@@ -1,3 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+  }
+  .datetime-picker {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .datetime-picker h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  select, input[type="date"] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  .result {
+    margin-top: 2rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+
 nav{
     bottom: 0;
     position: fixed;
@@ -33,4 +71,29 @@ ul{
 
 .card{
     margin-left: 2%;
+}
+
+.btn-m{
+    margin-top: 5%;
+}
+.btn-animation{
+    animation-name: btn-anim;
+}
+
+@keyframes btm-anim{
+    0%{
+        top: 0;
+    }
+    15%{
+        top: 12;
+    }
+    25%{
+        top: 22;
+    }
+    50%{
+        top: 50;
+    }
+    100%{
+        visibility: hidden;
+    }
 }
