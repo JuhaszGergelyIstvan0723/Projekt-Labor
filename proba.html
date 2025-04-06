@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Időpontfoglalás</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f0f8ff;
+    }
+    .datetime-picker {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .datetime-picker h2 {
+      color: #007bff;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    select, input[type="date"] {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .result {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.7rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="datetime-picker">
+    <h2>Időpontfoglalás</h2>
+    
+    <label for="date">Válassz napot:</label>
+    <input type="date" id="date">
+
+    <label for="hour">Válassz órát:</label>
+    <select id="hour">
+      <!-- Óra opciók 00-23 -->
+      <script>
+        for (let i = 0; i < 24; i++) {
+          document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
+        }
+      </script>
+    </select>
+
+    <label for="minute">Válassz percet:</label>
+    <select id="minute">
+      <!-- Perc opciók 00, 05, 10, ..., 55 -->
+      <script>
+        for (let i = 0; i < 60; i += 5) {
+          document.write(`<option value="${i}">${String(i).padStart(2, '0')}</option>`);
+        }
+      </script>
+    </select>
+
+    <button onclick="showSelected()">Kijelölt időpont</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function showSelected() {
+      let date = document.getElementById('date').value;
+      let hour = document.getElementById('hour').value;
+      let minute = document.getElementById('minute').value;
+
+      if (!date) {
+        document.getElementById('result').textContent = "Kérlek, válassz egy napot!";
+        return;
+      }
+
+      let selectedDateTime = `${date} ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+      document.getElementById('result').textContent = `Kijelölt időpont: ${selectedDateTime}`;
+    }
+  </script>
+
+</body>
+</html>
