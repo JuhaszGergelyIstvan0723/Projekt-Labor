@@ -23,7 +23,9 @@ function showSelected() {
       <p><strong>TAJ-szám:</strong> ${taj}</p>
       <p><strong>Időpont:</strong> ${selectedDateTime}</p>
       <p><strong>Vizsgálat:</strong> ${exam}</p>
+      <hr>
       <button onclick="backMainPage()" class="btn btn-primary">Vissza a főoldalra</button>
+      <br>
       <p id="countdown"></p>
     `;
         

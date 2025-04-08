@@ -80,6 +80,17 @@ ul{
     animation-name: btn-anim;
 }
 
+.datetime-picker input[type="text"], input[type="email"],input[type="date"], select {
+    color: black; /* Fehér szöveg a kontraszt miatt */
+    border: 2px solid #004085; /* Sötétebb színű keret */
+    border-radius: 5px; /* Lekerekített sarkok */
+    padding: 10px 15px; /* Kényelmes padding */
+    font-size: 16px; /* A betűméret */
+    width: 100%; /* Kitöltse a szülő elem szélességét */
+    box-sizing: border-box; /* Figyelembe veszi a paddingot és border-t a szélesség számításánál */
+    transition: background-color 0.3s, border-color 0.3s; /* Animáció a színváltozásokhoz */
+}
+
 @keyframes btm-anim{
     0%{
         top: 0;
