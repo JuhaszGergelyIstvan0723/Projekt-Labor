@@ -15,7 +15,7 @@ function showSelected() {
     }else{
         let selectedDateTime = `${date} ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
 
-        btnAnim.classList.add("btn-animation");
+        btnAnim.classList.add(".btn-animation");
 
     document.getElementById('result').innerHTML = `
       <p><strong>Név:</strong> ${name}</p>
