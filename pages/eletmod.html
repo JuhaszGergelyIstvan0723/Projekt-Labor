@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitNex Labor</title>
 </head>
 
 <body>
+    <!--Menü/navigációs sáv-->
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">FitNex</a>
+            <a class="navbar-brand" href="../index.html">FitNex</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,6 +42,8 @@
     </nav>
 
     <br>
+    <!--Csomagok-->
+    <h2 class="title">Életmód csomagok</h2>
     <div class="container pack">
         <div class="row d-flex justify-content-center">
             <div class="card col-lg-3" style="width: 18rem;">
@@ -48,8 +51,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Fizikai Fittness Csomag</h5>
                     <p class="card-text">A fizikai erőnlét növelése, állóképesség javítása és izomtömeg növelése.</p>
-                    <div class="btn-bottom"><button type="button" class="btn btn-primary" data-bs-toggle="modalFirst"
-                            data-bs-target="#modalFirst">Vásárlás</button>
+                    <div class="d-flex shop-btn">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#modalFitness">Vásárlás</button>
                     </div>
                 </div>
             </div>
@@ -59,16 +63,19 @@
                 <div class="card-body">
                     <h5 class="card-title">Mentális Jólét Csomag</h5>
                     <p class="card-text">A mentális egészség fenntartása és a stressz kezelése.</p>
-                    <a href="#" class="btn btn-primary">Vásárlás</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalJolet">Vásárlás</button>
                 </div>
             </div>
 
             <div class="card col-lg-3" style="width: 18rem;">
-                <img src="../images/jpg/egeszseges-taplalkozas.jpg" class="card-img-top" alt="Egészséges Táplálkozás Csomag Képe">
+                <img src="../images/jpg/egeszseges-taplalkozas.jpg" class="card-img-top"
+                    alt="Egészséges Táplálkozás Csomag Képe">
                 <div class="card-body">
                     <h5 class="card-title">Egészséges Táplálkozás Csomag</h5>
                     <p class="card-text">Az egészséges étkezési szokások kialakítása és fenntartása.</p>
-                    <a href="#" class="btn btn-primary">Vásárlás</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#taplalkozas">Vásárlás</button>
                 </div>
             </div>
 
@@ -77,74 +84,695 @@
                 <div class="card-body">
                     <h5 class="card-title">Fogyás Csomag</h5>
                     <p class="card-text">A súlycsökkentés és a testzsír arány csökkentése.</p>
-                    <a href="#" class="btn btn-primary">Vásárlás</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#fogyas">Vásárlás</button>
                 </div>
             </div>
         </div>
     </div>
     <br>
-    <div class="container"></div>
-    <div class="row d-flex justify-content-center">
-        <div class="card col-lg-3" style="width: 18rem;">
-            <img src="../images/png/eletmod.png" class="card-img-top img-fliud" alt="Családi Életmód Csomag Képe">
-            <div class="card-body">
-                <h5 class="card-title">Családi Életmód Csomag</h5>
-                <p class="card-text">A család számára közös, egészséges és aktív életmód kialakítása.</p>
-                <div class="btn-bottom"><a href="#" class="btn btn-primary">Vásárlás</a></div>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="card col-lg-3" style="width: 18rem;">
+                <img src="../images/png/eletmod.png" class="card-img-top img-fliud" alt="Családi Életmód Csomag Képe">
+                <div class="card-body">
+                    <h5 class="card-title">Családi Életmód Csomag</h5>
+                    <p class="card-text">A család számára közös, egészséges és aktív életmód kialakítása.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#csaladi">Vásárlás</button>
+                </div>
             </div>
-        </div>
 
-        <div class="card col-lg-3" style="width: 18rem;">
-            <img src="../images/jpg/detox.jpg" class="card-img-top img-fluid " alt="Digitális Detox Csomag Képe">
-            <div class="card-body">
-                <h5 class="card-title">Digitális Detox Csomag</h5>
-                <p class="card-text"> A digitális eszközök használatának csökkentése, a képernyő előtt töltött idő minimalizálása.</p>
-                <a href="#" class="btn btn-primary">Vásárlás</a>
+            <div class="card col-lg-3" style="width: 18rem;">
+                <img src="../images/jpg/detox.jpg" class="card-img-top img-fluid " alt="Digitális Detox Csomag Képe">
+                <div class="card-body">
+                    <h5 class="card-title">Digitális Detox Csomag</h5>
+                    <p class="card-text"> A digitális eszközök használatának csökkentése, a képernyő előtt töltött idő
+                        minimalizálása.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#detox">Vásárlás</button>
+                </div>
             </div>
-        </div>
 
-        <div class="card col-lg-3" style="width: 18rem;">
-            <img src="../images/jfif/produk.jfif" class="card-img-top img-fluid " alt="Produktivitás Csomag Képe">
-            <div class="card-body">
-                <h5 class="card-title">Produktivitás Csomag</h5>
-                <p class="card-text">Az időgazdálkodás és a munkahelyi hatékonyság növelése.</p>
-                <a href="#" class="btn btn-primary">Vásárlás</a>
+            <div class="card col-lg-3" style="width: 18rem;">
+                <img src="../images/jfif/produk.jfif" class="card-img-top img-fluid " alt="Produktivitás Csomag Képe">
+                <div class="card-body">
+                    <h5 class="card-title">Produktivitás Csomag</h5>
+                    <p class="card-text">Az időgazdálkodás és a munkahelyi hatékonyság növelése.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#produk">Vásárlás</button>
+                </div>
             </div>
-        </div>
 
-        <div class="card col-lg-3" style="width: 18rem;">
-            <img src="../images/png/belso.png" class="card-img-top img-fluid " alt="Belső Harmónia Csomag Képe">
-            <div class="card-body">
-                <h5 class="card-title">Belső Harmónia Csomag</h5>
-                <p class="card-text">Az érzelmi egyensúly megteremtése és a belső béke elérése.</p>
-                <a href="#" class="btn btn-primary">Vásárlás</a>
+            <div class="card col-lg-3" style="width: 18rem;">
+                <img src="../images/png/belso.png" class="card-img-top img-fluid " alt="Belső Harmónia Csomag Képe">
+                <div class="card-body">
+                    <h5 class="card-title">Belső Harmónia Csomag</h5>
+                    <p class="card-text">Az érzelmi egyensúly megteremtése és a belső béke elérése.</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#belso">Vásárlás</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!--Modal1-->
+    <div class="modal modal-lg fade" id="modalFitness" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fizikai Fittness Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/jpeg/fitness.jpeg" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>A fizikai erőnlét növelése, állóképesség javítása és izomtömeg növelése. Emellett
+                                        segít az egészséges életmód kialakításában és fenntartásában. A csomagban
+                                        található eszközök és tartalmak kezdőknek és haladóknak egyaránt ideálisak, hogy
+                                        fokozatosan érjék el kitűzött céljaikat.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Ellenállási szalagok (50db/cs)<span
+                                            class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Aktivitásmérő óra<span
+                                            class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Egészséges energiaszeletek
+                                        (120db/cs)<span class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Jóga matrac (5db/cs)<span
+                                            class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Izomlazító krém<span
+                                            class="price">10.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">50.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">53.000
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal2-->
+    <div class="modal modal-lg fade" id="modalJolet" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Mentális Jólét Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/jpg/mentalis.png" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>A mentális egészség fenntartása és a stressz kezelése. A csomag segít az érzelmi
+                                        egyensúly kialakításában, valamint támogatja az önismeret és a pozitív
+                                        gondolkodás fejlesztését. Gyakorlatokat, eszközöket és útmutatókat tartalmaz a
+                                        belső nyugalom és a tudatos jelenlét eléréséhez.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Zerex Tea havi csomag (6db/cs)<span
+                                            class="price">21.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Nick Trenton - Ne agyald túl, engedd el
+                                        📖<span class="price">5.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">26.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">29.000
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal3-->
+    <div class="modal modal-lg fade" id="taplalkozas" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Egészséges Táplálkozás Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/jpg/egeszseges-taplalkozas.jpg" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>Az egészséges étkezési szokások kialakítása és fenntartása. A csomag segít
+                                        egyensúlyban tartani a tápanyagbevitelt, és támogatja a hosszú távú,
+                                        fenntartható életmódváltást. Tartalmaz recepteket, étrendterveket és hasznos
+                                        tippeket az energikusabb, egészségesebb mindennapokért.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Zabkása-alap mix 28db/cs<span
+                                            class="price">64.120 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Omega-3 tabletták 4db/cs<span
+                                            class="price">8.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Egészséges Receptek Mini Köny<span
+                                            class="price">2.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kulacs beépített gyümölcstartóval<span
+                                            class="price">4.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">78.120
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">81.120
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal4-->
+    <div class="modal modal-lg fade" id="fogyas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Fogyás Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/webp/fogyas.jpg" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>A súlycsökkentés és a testzsír arány csökkentése. Segít az anyagcsere fokozásában
+                                        és az egészséges életmód kialakításában. A cél a fenntartható fogyás elérése,
+                                        miközben a szervezet megkapja a szükséges tápanyagokat.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">L-karnitin kapszula<span
+                                            class="price">3.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Növényi fehérjepor (borsó és
+                                        rizsfehérje)<span class="price">25.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Zöld smoothie por<span
+                                            class="price">5.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kollagén italpor<span
+                                            class="price">4.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Multivitamin súlycsökkentőknek<span
+                                            class="price">3.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">40.500
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">43.500
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
+    <!--Modal5-->
+    <div class="modal modal-lg fade" id="csaladi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Családi Életmód Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/webp/eletmod.png" class="img-fluid modal-img">
+                            </div>
 
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>A család számára közös, egészséges és aktív életmód kialakítása. Könnyen
+                                        beilleszthető megoldásokat kínálunk a mindennapokba, hogy kicsik és nagyok is
+                                        örömmel mozogjanak és jól érezzék magukat. A kiegyensúlyozott táplálkozást
+                                        támogató termékekkel és közös programötletekkel erősítjük a családi kötelékeket
+                                        és az egészségtudatosságot.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Multivitamin gyerekeknek és
+                                        felnőtteknek<span class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Egészséges receptek szakácskönyv<span
+                                            class="price">8.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Gyermekbarát fehérjeszeletek,
+                                        snackek<span class="price">8.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Családi aktivitás naptár<span
+                                            class="price">4.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Okoskarkötő szett (max. 5db/cs)<span
+                                            class="price">max. 50.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">80.500
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">83.500
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal6-->
+    <div class="modal modal-lg fade" id="detox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Digitális Detox Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/jpg/detox.jpg" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>A digitális eszközök használatának csökkentése, a képernyő előtt töltött idő
+                                        minimalizálása. A csomag segít visszatalálni a valódi élményekhez, a jelen
+                                        megéléséhez és a tudatos pihenéshez. Támogatja az alvásminőség javítását, a
+                                        szemfáradtság csökkentését, és elősegíti a mentális kiegyensúlyozottságot a
+                                        képernyőmentes időszakok bevezetésével.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Detox ital shaker<span
+                                            class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Offline kihívás kártyacsomag<span
+                                            class="price">8.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Digitális detox napló<span
+                                            class="price">3.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Aromaterápiás stresszoldó csomag<span
+                                            class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Képernyőszűrő szemüveg fólia<span
+                                            class="price">10.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">41.500
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">44.500
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal7-->
+    <div class="modal modal-lg fade" id="csaladi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Családi Életmód Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/webp/eletmod.png" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>A család számára közös, egészséges és aktív életmód kialakítása. Könnyen
+                                        beilleszthető megoldásokat kínálunk a mindennapokba, hogy kicsik és nagyok is
+                                        örömmel mozogjanak és jól érezzék magukat. A kiegyensúlyozott táplálkozást
+                                        támogató termékekkel és közös programötletekkel erősítjük a családi kötelékeket
+                                        és az egészségtudatosságot.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Multivitamin gyerekeknek és
+                                        felnőtteknek<span class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Egészséges receptek szakácskönyv<span
+                                            class="price">8.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Gyermekbarát fehérjeszeletek,
+                                        snackek<span class="price">8.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Családi aktivitás naptár<span
+                                            class="price">4.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Okoskarkötő szett (max. 5db/cs)<span
+                                            class="price">max. 50.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">80.500
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">83.500
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal8-->
+    <div class="modal modal-lg fade" id="produk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Produktivitás Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/jfif/produk.jfif" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>Az időgazdálkodás és a munkahelyi hatékonyság növelése. Segít a napi teendők
+                                        rendszerezésében, a fókusz megtartásában, valamint a stresszmentes és tudatos
+                                        munkavégzés kialakításában</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Vitamin és- vagy energiaital por<span
+                                            class="price">10.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Produktivitási könyv - Hatékony
+                                        szokások<span class="price">4.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Fókuszban tartó illóolaj-keverék<span
+                                            class="price">3.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Gyógynövényes fókuszital<span
+                                            class="price">4.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Adaptogén alapú fókusz spra<span
+                                            class="price">5.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">26.500
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">29.500
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal9-->
+    <div class="modal modal-lg fade" id="belso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Belső Harmónia Csomag</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="../images/png/belso.png" class="img-fluid modal-img">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="modal-text-right">
+                                    <p>Az érzelmi egyensúly megteremtése és a belső béke elérése. Segít a mindennapi
+                                        stressz oldásában, a tudatos jelenlét kialakításában és a pozitív életszemlélet
+                                        megerősítésében.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Levendulás relaxációs
+                                        illóolaj-keverék<span class="price">3.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Lélekhangoló kártyacsomag<span
+                                            class="price">7.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Nyugtató gyógynövény tea válogatás<span
+                                            class="price">3.500 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kristály szett (pl. ametiszt,
+                                        rózsakvarc)<span class="price">15.000 Ft</span></li>
+                                    <li class="list-group-item list-item-color">Aromaterápiás gyertyák<span
+                                            class="price">5.000 Ft</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-5">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item list-item-color">Teljes összeg<span class="price">20.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Kiszállítás<span class="price">3.000
+                                            Ft</span></li>
+                                    <li class="list-group-item list-item-color">Végösszeg:<span class="bigPrice">23.000
+                                            Ft</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
+                    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Hamarosan!">Megveszem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
     <footer class="bg-primary text-white py-4 mt-5">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
 
             <div class="mb-3 mb-md-0">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.7245334358854!2d20.301973775816215!3d46.434339268190016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47446fb9142c986f%3A0xe222ea3aefe9f178!2zSMOzZG1lesWRdsOhc8OhcmhlbHksIErDs2thaSB1LiAyMDIsIDY4MDA!5e0!3m2!1shu!2shu!4v1744134314526!5m2!1shu!2shu"
-                    width="360" height="250" style="border:1px;" allowfullscreen="false" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <img class="footer-img" src="../images/jpg/magán labor 25021.jpg" alt="Magánlabor belőlről">
             </div>
 
             <div>
                 <h5 class="fw-bold">Elérhetőségek</h5>
                 <ul class="list-unstyled mb-0">
                     <li><i class="bi bi-telephone-fill"></i><a href="tel:+36307359341"
-                            class="text-white text-decoration-underline"> +36 30 735 9341</a></li>
+                            class="text-white text-decoration-underline">
+                            +36 30 735 9341</a></li>
                     <li><i class="bi bi-envelope-fill"></i><a href="mailto:FitNex@gmail.com"
                             class="text-white text-decoration-underline"> FitNex@gmail.com</a></li>
                     <li><i class="bi bi-houses-fill"></i> <a href="https://maps.app.goo.gl/kKrjNoH2w9F9jPkW7"
                             class="text-white text-decoration-underline"> Jókai u. 202</a></li>
                 </ul>
+            </div>
+
+            <div class="mt-3 mt-md-0 align ">
+                <span>
+                    <h5 class="fw-bold">Közösségi médiák</h5>
+                    <a href="https://www.facebook.com">
+                        <h4><i class="bi bi-facebook"></i></h4>
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <h4><i class="bi bi-instagram"></i></h4>
+                    </a>
+                    <a href="https://www.x.com">
+                        <h4><i class="bi bi-twitter"></i></h4>
+                    </a>
+
+                </span>
             </div>
 
             <div class="mt-3 mt-md-0 text-md-end">

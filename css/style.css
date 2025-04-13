@@ -92,6 +92,18 @@ ul {
   margin-top: 5%;
 }
 
+.links{
+  float: right;
+  text-decoration: none;
+  color: #007bff;
+}
+.footer-social-media{
+  float: right;
+}
+.bi :hover {
+  background-color: gray;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="date"],
@@ -174,6 +186,14 @@ h1 {
   font-weight: bold;
   color: #28a745;
   margin-left: 10px;
+  float: right;
+}
+
+.bigPrice{
+  font-weight: bold;
+  color: #28a745;
+  margin-left: 10px;
+  font-size: larger;
 }
 
 /* Hover effektus */
@@ -190,4 +210,104 @@ h1 {
   animation-name: "btn-anim";
 }
 
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-weight: 600;
+}
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
 
+.shop-btn{
+  position: relative;
+  bottom: 0;
+}
+
+.modal-img{
+  width: 25rem;
+  height: 15rem;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.1);
+}
+.list-item-color{
+  color:#0056b3;
+}
+
+.modal-text-right{
+  max-width: 800px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-right: 5px solid #007bff;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+.modal-text-left{
+  max-width: 800px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-left: 5px solid #007bff;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+.modal-text-none{
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.modal-text p{
+  margin: 0;
+}
+
+.card-container{
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+.title-h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007bff;
+  position: relative;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.title-h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.footer-img{
+  width: 11.5rem;
+  height: 11.5rem;
+}

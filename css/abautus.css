@@ -87,24 +87,6 @@
     margin: 0;
   }
 
-  .team-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 1.5rem;
-    position: relative;
-    font-weight: 600;
-  }
-  
-  .team-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #007bff;
-    margin: 0.5rem auto 0;
-    border-radius: 2px;
-  }
   
 
   @media (max-width: 768px) {
